@@ -1,9 +1,13 @@
+#step1 {
+    background-color: #FFFF00;
+}
+
 #progress {
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
-<!--
+
 #insured {
     display: none;
 }
@@ -11,4 +15,4 @@
 #payment {
     display: none;
 }
--->
+

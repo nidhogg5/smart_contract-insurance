@@ -18,10 +18,10 @@
     <header>
         <div class="container">
             <div class="row">
-                <a class="brand pull-left" href="index.html">XX人壽</a>
+                <a class="brand pull-left" href="/">XX人壽</a>
                 <ul class="list-inline list-unstyled pull-right">
-                    <li><a href="sign_in.html">登入</a></li>
-                    <li><a href="sign_up.html">註冊帳號</a></li>
+                    <li><a href="signin">登入</a></li>
+                    <li><a href="signup">註冊帳號</a></li>
                 </ul>
             </div>
     </header>
@@ -34,23 +34,30 @@
                     <form class="form-horizontal">
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-name">身分證字號</label>
+                            <label class="col-sm-2 control-label" for="contact-id">帳號</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" id="contact-name" placeholder="身分證字號">
+                                <input class="form-control" type="text" id="contact-id" placeholder="帳號">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-name">密碼</label>
+                            <label class="col-sm-2 control-label" for="contact-identity">身分證字號</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="password" id="contact-name" placeholder="包含至少一個數字字元(0-9)">
+                                <input class="form-control" type="text" id="contact-identity" placeholder="身分證字號">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-name">確認密碼</label>
+                            <label class="col-sm-2 control-label" for="contact-password">密碼</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="password" id="contact-name" placeholder="再次輸入密碼">
+                                <input class="form-control" type="password" id="contact-password" placeholder="包含至少一個數字字元(0-9)">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="contact-repassword">確認密碼</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="password" id="contact-repassword" placeholder="再次輸入密碼">
                             </div>
                         </div>
 
@@ -62,9 +69,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-email">生日</label>
+                            <label class="col-sm-2 control-label" for="contact-birthday">生日</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="date" id="contact-email" placeholder="您的生日">
+                                <input class="form-control" type="date" id="contact-birthday" placeholder="您的生日">
                             </div>
 
                         </div>
@@ -77,25 +84,28 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-name">行動電話</label>
+                            <label class="col-sm-2 control-label" for="contact-phone">行動電話</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" id="contact-name" placeholder="行動電話">
+                                <input class="form-control" type="text" id="contact-phone" placeholder="行動電話">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label" for="contact-name">住址</label>
+                            <label class="col-sm-2 control-label" for="contact-address">住址</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" id="contact-name" placeholder="住址">
+                                <input class="form-control" type="text" id="contact-address" placeholder="住址">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-4">
+                            <div class="col-sm-4">
                                 <a href="newAccount.html" role="button" class="btn btn-success btn-lg">送出</a>
                             </div>
-                            <div class="col-sm-4 col-sm-offset-2">
-                                <button class="btn btn-success btn-lg" type="submit">送出</button>
+                            <div class="col-sm-4">
+                                <a id="default" role="button" class="btn btn-success btn-lg">測試預設值</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-success btn-lg" type="reset">重設</button>
                             </div>
                         </div>
 
@@ -147,6 +157,7 @@
 
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/sign_up.js"></script>
 
 </body>
 
