@@ -4,13 +4,6 @@ var web3 = require('../web3.js');
 var router = express.Router();
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'leviathan5',
-  database: 'smart'
-});
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.sendFile(path.resolve('public', 'index.html'));
@@ -48,12 +41,28 @@ router.get('/deploy', function (req, res, next) {
   console.log("deploy the contract");
 });
 
-router.get('/registration', function (req, res, next) {
+router.post('/registration', function (req, res, next) {
 
   console.log("registration");
 
+  console.log(req.body);
+  
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'leviathan5',
+    database: 'smart'
+  });
+
   //開始連接
   connection.connect();
+
+  connection.query('INSERT INTO smart.account SET ?', req.body, function(error){
+    if(error){
+        console.log('寫入資料失敗！');
+        throw error;
+    }
+  });
 
   //結束連線
   connection.end();
