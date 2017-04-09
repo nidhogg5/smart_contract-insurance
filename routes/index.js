@@ -50,15 +50,15 @@ router.get('/deploy', function (req, res, next) {
 
 router.get('/registration', function (req, res, next) {
 
+  console.log("registration");
+
   //開始連接
   connection.connect();
 
-
-//  res.sendFile(path.resolve('public', 'index.html'));
-  console.log("registration");
-
   //結束連線
   connection.end();
+
+  res.sendFile(path.resolve('public', 'index.html'));
 });
 
 module.exports = router;
