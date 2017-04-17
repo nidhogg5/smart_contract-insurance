@@ -1,4 +1,5 @@
-var Web3 = require('D:\Desktop\smart_contract-insurance/web3.js');
+var Web3 = require('web3');
+var web3 = new Web3();
 var eth = web3.eth;
 
 var abiArray = [{"constant":true,"inputs":[],"name":"getCompanyAddress","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getStatus","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"FinishPayment","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"destroy","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"endAnnuity","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getInsurerAddress","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"revoke","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"confirme","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"year","type":"uint256"},{"name":"month","type":"uint256"},{"name":"day","type":"uint256"}],"name":"time","outputs":[],"payable":false,"type":"function"},{"inputs":[{"name":"year","type":"uint256"},{"name":"month","type":"uint256"},{"name":"day","type":"uint256"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[],"name":"PayEvent","type":"event"},{"anonymous":false,"inputs":[],"name":"RevocationEvent","type":"event"},{"anonymous":false,"inputs":[],"name":"RevocationMailEvent","type":"event"},{"anonymous":false,"inputs":[],"name":"NotRevocationEvent","type":"event"}];
@@ -37,6 +38,7 @@ $(function() {
 })
 
 function update() {
-	
-
+	$("#a");
+	$("#b");
+	$("#c").html(getCompanyAddress()+getInsurerAddress()+getStatus());
 }

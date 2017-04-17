@@ -1,12 +1,4 @@
-#a {
-    height: 40rem;
-    border-style:solid;
-}
-#b {
-    height: 40rem;
-    border-style:solid;
-}
-#console {
+#a, #b, #c {
     height: 40rem;
     border-style:solid;
 }
